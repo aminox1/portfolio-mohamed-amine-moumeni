@@ -601,7 +601,7 @@ const Portfolio = () => {
         <section id="interests" className={`py-20 ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Centres d&apos;Intérêt
+              Centres Intérêt
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className={`p-6 rounded-2xl ${isDark ? 'bg-gray-900' : 'bg-gray-50'} text-center hover:shadow-lg transition-all duration-300`}>
