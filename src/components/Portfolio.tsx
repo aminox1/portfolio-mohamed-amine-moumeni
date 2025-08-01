@@ -125,8 +125,8 @@ const Portfolio = () => {
   const experiences = [
     {
       company: "ATOS Casablanca",
-      role: "Développeur Full Stack - Stage de fin d&apos;études",
-      period: "Mars 2025 - En cours",
+      role: "Développeur Full Stack - Stage de fin d’études pour l’obtention du diplôme d’ingénieur d’État en informatique",
+      period: "Mars-Août 2025",
       description: "Plateforme d'Intégration avec Mocks API pour la Prise de Commande Unifiée (PCU)(Jordanie, North Africa, Botswana)",
       technologies: ["Java", "JavaScript", "React", "Node.js", "Spring Boot", "Docker", "WireMock"]
     },
