@@ -127,14 +127,14 @@ const Portfolio = () => {
       company: "ATOS Casablanca",
       role: "Développeur Full Stack - Stage de fin d&apos;études",
       period: "Mars 2025 - En cours",
-      description: "Plateforme d&apos;Intégration avec Mocks API pour la Prise de Commande Unifiée (PCU) (Jordanie, North Africa, Botswana)",
+      description: "Plateforme d'Intégration avec Mocks API pour la Prise de Commande Unifiée (PCU)(Jordanie, North Africa, Botswana)",
       technologies: ["Java", "JavaScript", "React", "Node.js", "Spring Boot", "Docker", "WireMock"]
     },
     {
       company: "6Solutions Casablanca",
       role: "Développeur Full Stack - Stage",
       period: "Juillet-Sept 2024",
-      description: "Développement d&apos;une application pour créer un Smart Parking intelligent",
+      description: "Developpement d'unen application pour cree un Smart Parking inteligent  avec reconnaissance de plaques d'immatriculation",
       technologies: ["Python", "ANPR", "OCR", "OpenCV", "Angular", "Spring Boot", "Docker", "SQL"]
     },
     {
@@ -142,7 +142,7 @@ const Portfolio = () => {
       role: "Développeur Backend - Stage",
       period: "Juillet-Août 2023",
       description: "Système de gestion des stocks et ventes",
-      technologies: ["Java", "SQL", "Java Swing", "MySQL"]
+      technologies: ["PHP", "SQL", "bootstrap", "MySQL"]
     }
   ];
 
