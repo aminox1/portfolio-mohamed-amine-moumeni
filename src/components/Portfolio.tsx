@@ -118,7 +118,7 @@ const Portfolio = () => {
     { id: 'skills', label: 'Compétences', icon: Code },
     { id: 'certifications', label: 'Certifications', icon: Award },
     { id: 'education', label: 'Formation', icon: GraduationCap },
-    { id: 'interests', label: 'Centres d&apos;intérêt', icon: Heart },
+    { id: 'interests', label: 'Centres intérêt', icon: Heart },
     { id: 'contact', label: 'Contact', icon: Mail }
   ];
 
