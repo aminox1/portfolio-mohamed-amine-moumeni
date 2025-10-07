@@ -663,7 +663,7 @@ const Portfolio = () => {
                     <div>
                       <p className="font-semibold">Téléphone</p>
                       <a href="tel:+212632746536" className="text-green-600 hover:underline">
-                        +212 632-746-536
+                        +33 631-908-979
                       </a>
                     </div>
                   </div>
