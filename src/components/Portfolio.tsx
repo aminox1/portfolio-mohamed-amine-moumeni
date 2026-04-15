@@ -65,6 +65,7 @@ type Project = {
   technologies: string[];
   highlights: string[];
   url: string;
+  demoUrl?: string;
 };
 
 type ExperienceItem = {
@@ -101,6 +102,8 @@ type Lang = 'fr' | 'en';
 
 const githubProfile = 'https://github.com/aminox1';
 const githubPortfolioRepo = 'https://github.com/aminox1/portfolio-mohamed-amine-moumeni';
+const marocPortalRepo = 'https://github.com/aminox1/projets-rabat-pmm';
+const marocPortalDemo = 'https://youtu.be/evAKBwffkno';
 const calendlyLink = 'https://calendly.com/aminemoumni61/15-minute-meeting';
 
 const navItems: Section[] = [
@@ -173,6 +176,8 @@ const uiText = {
     projectsKicker: 'Projets sélectionnés',
     projectsTitle: 'Mes projets principaux',
     portfolioRepo: 'Repo du portfolio',
+    projectRepoCta: 'Voir le repo',
+    projectDemoCta: 'Voir la demo',
     caseStudyKicker: 'Étude de cas',
     caseStudyTitle: 'De la veille manuelle à une prospection assistée par IA',
     caseStudyChallengeLabel: 'Défi',
@@ -293,6 +298,8 @@ const uiText = {
     projectsKicker: 'Selected Projects',
     projectsTitle: 'Main Projects',
     portfolioRepo: 'Portfolio repository',
+    projectRepoCta: 'View repo',
+    projectDemoCta: 'Watch demo',
     caseStudyKicker: 'Case Study',
     caseStudyTitle: 'From manual sourcing to AI-assisted opportunity discovery',
     caseStudyChallengeLabel: 'Challenge',
@@ -386,7 +393,8 @@ const featuredProjects: Project[] = [
     description: 'Plateforme de scraping multi-sites avec recommandations IA, chatbot NLP et automatisation de la veille.',
     technologies: ['React', 'Node.js', 'MongoDB', 'TensorFlow.js', 'Redis', 'JWT'],
     highlights: ['92% de précision', '50+ sites scrapés', 'Chatbot NLP'],
-    url: githubPortfolioRepo,
+    url: marocPortalRepo,
+    demoUrl: marocPortalDemo,
   },
   {
     title: 'Reconnaissance de Plantes',
@@ -413,7 +421,8 @@ const featuredProjectsEn: Project[] = [
     description: 'Multi-source scraping platform with AI recommendations, NLP chatbot, and automated monitoring workflows.',
     technologies: ['React', 'Node.js', 'MongoDB', 'TensorFlow.js', 'Redis', 'JWT'],
     highlights: ['92% precision', '50+ scraped sources', 'NLP chatbot'],
-    url: githubPortfolioRepo,
+    url: marocPortalRepo,
+    demoUrl: marocPortalDemo,
   },
   {
     title: 'Plant Recognition',
@@ -839,12 +848,19 @@ function TechPill({ label, className = '' }: { label: string; className?: string
   );
 }
 
-function ProjectCard({ project, index, compact = false }: { project: Project; index: number; compact?: boolean }) {
+function ProjectCard({
+  project,
+  index,
+  compact = false,
+  labels,
+}: {
+  project: Project;
+  index: number;
+  compact?: boolean;
+  labels: { repo: string; demo: string };
+}) {
   return (
-    <motion.a
-      href={project.url}
-      target="_blank"
-      rel="noopener noreferrer"
+    <motion.div
       className={`interactive-glow group block rounded-3xl border border-white/10 bg-white/6 p-6 shadow-[0_25px_80px_rgba(0,0,0,0.25)] backdrop-blur-md transition-all ${compact ? 'h-full' : ''}`}
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -852,6 +868,15 @@ function ProjectCard({ project, index, compact = false }: { project: Project; in
       transition={{ duration: 0.45, delay: index * 0.08 }}
       whileHover={{ y: -8, rotateX: -4, rotateY: 6, scale: 1.01 }}
       whileTap={{ scale: 0.99 }}
+      role="link"
+      tabIndex={0}
+      onClick={() => window.open(project.url, '_blank', 'noopener,noreferrer')}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          window.open(project.url, '_blank', 'noopener,noreferrer');
+        }
+      }}
       onMouseMove={(event) => {
         const element = event.currentTarget;
         const rect = element.getBoundingClientRect();
@@ -887,7 +912,33 @@ function ProjectCard({ project, index, compact = false }: { project: Project; in
           <TechPill key={technology} label={technology} />
         ))}
       </div>
-    </motion.a>
+
+      <div className="mt-6 flex flex-wrap gap-3">
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(event) => event.stopPropagation()}
+          className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/35 bg-cyan-400/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-cyan-100 transition hover:bg-cyan-400/20"
+        >
+          <Github size={14} />
+          {labels.repo}
+        </a>
+
+        {project.demoUrl ? (
+          <a
+            href={project.demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(event) => event.stopPropagation()}
+            className="inline-flex items-center gap-2 rounded-xl border border-emerald-300/40 bg-emerald-300/12 px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-100 transition hover:bg-emerald-300/24"
+          >
+            <ExternalLink size={14} />
+            {labels.demo}
+          </a>
+        ) : null}
+      </div>
+    </motion.div>
   );
 }
 
@@ -1694,7 +1745,7 @@ export default function Portfolio() {
 
             <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {localizedFeaturedProjects.map((project, index) => (
-                <ProjectCard key={project.title} project={project} index={index} />
+                <ProjectCard key={project.title} project={project} index={index} labels={{ repo: t.projectRepoCta, demo: t.projectDemoCta }} />
               ))}
             </div>
 
@@ -1735,7 +1786,7 @@ export default function Portfolio() {
             <p className="mt-4 max-w-3xl text-white/75">{t.githubText}</p>
             <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {localizedGithubProjects.map((project, index) => (
-                <ProjectCard key={project.title} project={project} index={index + 3} compact />
+                <ProjectCard key={project.title} project={project} index={index + 3} compact labels={{ repo: t.projectRepoCta, demo: t.projectDemoCta }} />
               ))}
             </div>
           </div>
