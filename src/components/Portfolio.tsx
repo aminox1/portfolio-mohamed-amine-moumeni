@@ -104,6 +104,8 @@ const githubProfile = 'https://github.com/aminox1';
 const githubPortfolioRepo = 'https://github.com/aminox1/portfolio-mohamed-amine-moumeni';
 const marocPortalRepo = 'https://github.com/aminox1/projets-rabat-pmm';
 const marocPortalDemo = 'https://youtu.be/evAKBwffkno';
+const jobMarketIntelligenceRepo = 'https://github.com/aminox1/job-market-intelligence';
+const jobMarketIntelligenceDemo = 'https://jmi-aminox1.streamlit.app';
 const calendlyLink = 'https://calendly.com/aminemoumni61/15-minute-meeting';
 
 const navItems: Section[] = [
@@ -476,12 +478,13 @@ const githubProjects: Project[] = [
     url: `${githubProfile}/Projet.NET`,
   },
   {
-    title: 'Jeux IA 2 EMSI Côte d Azur',
-    type: 'Projet JavaScript',
-    description: 'Projet ludique et interactif autour de l’IA, utile pour montrer une approche produit et expérimentation.',
-    technologies: ['JavaScript', 'UI', 'AI'],
-    highlights: ['Interactive', 'Experimental', 'Showcase'],
-    url: `${githubProfile}/Jeux-IA2-EMSI-COTE-D-AZUR`,
+    title: 'Job Market Intelligence',
+    type: 'Application IA & Data',
+    description: 'Plateforme qui collecte automatiquement des offres tech, extrait 400+ compétences, analyse les tendances et recommande les skills à apprendre.',
+    technologies: ['Python', 'Scikit-learn', 'NLP', 'Docker', 'Kubernetes'],
+    highlights: ['400+ compétences détectées', 'Prédictions à 30 jours', 'Recommandations personnalisées'],
+    url: jobMarketIntelligenceRepo,
+    demoUrl: jobMarketIntelligenceDemo,
   },
   {
     title: 'Portfolio professionnel',
@@ -527,12 +530,13 @@ const githubProjectsEn: Project[] = [
     url: `${githubProfile}/Projet.NET`,
   },
   {
-    title: 'AI Games 2 EMSI Côte d Azur',
-    type: 'JavaScript project',
-    description: 'Interactive AI-focused project showcasing product mindset and experimentation.',
-    technologies: ['JavaScript', 'UI', 'AI'],
-    highlights: ['Interactive', 'Experimental', 'Showcase'],
-    url: `${githubProfile}/Jeux-IA2-EMSI-COTE-D-AZUR`,
+    title: 'Job Market Intelligence',
+    type: 'AI & Data application',
+    description: 'Platform that automatically collects tech jobs, extracts 400+ skills, analyzes trends, and recommends what to learn next.',
+    technologies: ['Python', 'Scikit-learn', 'NLP', 'Docker', 'Kubernetes'],
+    highlights: ['400+ skills detected', '30-day forecasting', 'Personalized recommendations'],
+    url: jobMarketIntelligenceRepo,
+    demoUrl: jobMarketIntelligenceDemo,
   },
   {
     title: 'Professional portfolio',
