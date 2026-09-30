@@ -667,16 +667,17 @@ const experienceTechFr: ExperienceItem[] = [
     company: 'Laboratoire i3S (CNRS)',
     role: 'Développeur Chercheur - Réseaux & Data Science (Stage PFE)',
     period: 'Juin 2026 - Septembre 2026',
-    description: 'Étude de l’impact du changement climatique sur les réseaux de télécommunications, sous la supervision de Guillaume Urvoy-Keller (CNRS).',
-    technologies: ['Python', 'Data Science', 'Big Data'],
+    description: 'Étude de l’impact du changement climatique sur les réseaux de télécommunications (Alpes-Maritimes), sous la supervision de Guillaume Urvoy-Keller : pipeline de données, site de monitoring et analyse statistique.',
+    technologies: ['Python', 'DuckDB', 'SQL', 'Node.js', 'Express', 'React', 'Vite', 'Plotly', 'GitHub Actions'],
     contract: 'Stage PFE',
     location: 'Sophia Antipolis, France · Sur site',
     missions: [
-      'Analyse de données environnementales et de performance réseau à grande échelle',
-      'Modélisation et traitement de données pour l étude d impact climatique sur les infrastructures télécom',
-      'Cadrage du sujet de recherche et définition de la méthodologie d analyse',
+      'Reprise et fiabilisation d un pipeline de collecte quotidienne : ARCEP (4 opérateurs), Infoclimat (15 stations) et Météo-France (climatologique, forêts, vigilance, horaire)',
+      'Migration SQLite → DuckDB, verrou anti-concurrence après un incident réel et téléchargements incrémentaux via ETag HTTP',
+      'Site de monitoring complet : API REST Node.js/Express en lecture seule, frontend React avec graphes météo/pannes synchronisés et page Vigilance (carte de France par département)',
+      'Analyse statistique sur 484 jours (Mann-Whitney, régression de Poisson contrôlée par saison) ; ~60 issues GitHub traitées en Scrum avec PR revues',
     ],
-    impact: ['Recherche appliquée CNRS', 'Analyse de données à grande échelle', 'Enjeux de durabilité numérique'],
+    impact: ['+45 % de pannes les jours de vigilance élevée (p = 0,0007)', 'Pipeline 100 % automatisé', 'Analyse reproductible (code + données)'],
   },
   {
     company: 'ATOS',
@@ -729,16 +730,17 @@ const experienceTechEn: ExperienceItem[] = [
     company: 'i3S Laboratory (CNRS)',
     role: 'Research Developer - Networks & Data Science (Final year internship)',
     period: 'June 2026 - September 2026',
-    description: 'Studying the impact of climate change on telecommunications networks, under the supervision of Guillaume Urvoy-Keller (CNRS).',
-    technologies: ['Python', 'Data Science', 'Big Data'],
+    description: 'Studied the impact of climate change on telecommunications networks (Alpes-Maritimes), under the supervision of Guillaume Urvoy-Keller: data pipeline, monitoring website and statistical analysis.',
+    technologies: ['Python', 'DuckDB', 'SQL', 'Node.js', 'Express', 'React', 'Vite', 'Plotly', 'GitHub Actions'],
     contract: 'Final year internship',
     location: 'Sophia Antipolis, France · On site',
     missions: [
-      'Analyzed environmental and network performance data at scale',
-      'Modeled and processed data to study the climate impact on telecom infrastructure',
-      'Scoped the research topic and defined the analysis methodology',
+      'Took over and hardened a daily data collection pipeline: ARCEP (4 operators), Infoclimat (15 stations) and Météo-France (climatological, forest, weather warnings, hourly)',
+      'Migrated SQLite → DuckDB, added a concurrency lock after a real incident and incremental downloads via HTTP ETag',
+      'Built a full monitoring website: read-only Node.js/Express REST API, React frontend with synchronized weather/outage charts and a Vigilance page (France map by department)',
+      'Statistical analysis over 484 days (Mann-Whitney, Poisson regression controlled for season); ~60 GitHub issues delivered in Scrum with reviewed PRs',
     ],
-    impact: ['Applied CNRS research', 'Large-scale data analysis', 'Digital sustainability focus'],
+    impact: ['+45% outages on high-warning days (p = 0.0007)', 'Fully automated pipeline', 'Reproducible analysis (code + data)'],
   },
   {
     company: 'ATOS',
@@ -791,16 +793,17 @@ const experienceFuncFr: ExperienceItem[] = [
     company: 'Laboratoire i3S (CNRS)',
     role: 'Chercheur Réseaux & Data Science (Stage PFE)',
     period: 'Juin 2026 - Septembre 2026',
-    description: 'Cadrage du sujet de recherche et définition de la méthodologie d’analyse, sous la supervision de Guillaume Urvoy-Keller (CNRS).',
-    technologies: ['Analyse de données', 'Méthodologie de recherche', 'Python'],
+    description: 'Étude de l’impact du changement climatique sur les infrastructures télécom (Alpes-Maritimes), sous la supervision de Guillaume Urvoy-Keller : du cadrage à l’analyse statistique.',
+    technologies: ['Analyse de données', 'Méthodologie de recherche', 'Figma', 'StarUML', 'Scrum', 'Python', 'DuckDB'],
     contract: 'Stage PFE',
     location: 'Sophia Antipolis, France · Sur site',
     missions: [
-      'Cadrage du sujet de recherche et définition de la méthodologie d analyse',
-      'Étude de l impact du changement climatique sur les infrastructures de télécommunications',
-      'Analyse liée aux enjeux de durabilité numérique',
+      'Cadrage du sujet et étude bibliographique (20+ sources scientifiques et institutionnelles)',
+      'Reprise et fiabilisation d un pipeline centralisant ARCEP (4 opérateurs), Infoclimat (15 stations) et Météo-France',
+      'Maquettage Figma validé avec l encadrement, cas d utilisation UML, puis développement d un site de monitoring (météo, pannes réseau, page Vigilance)',
+      'Pilotage en Scrum (dailies, ~60 issues GitHub, PR revues) avec trois encadrants aux rôles distincts ; analyse statistique de corrélation sur 484 jours',
     ],
-    impact: ['Recherche appliquée CNRS', 'Méthodologie de recherche définie', 'Durabilité numérique'],
+    impact: ['+45 % de pannes les jours de vigilance élevée (p = 0,0007)', '3 missions de la convention menées à terme', 'Note de cadrage ML rédigée'],
   },
   {
     company: 'ATOS',
@@ -853,16 +856,17 @@ const experienceFuncEn: ExperienceItem[] = [
     company: 'i3S Laboratory (CNRS)',
     role: 'Networks & Data Science Researcher (Final year internship)',
     period: 'June 2026 - September 2026',
-    description: 'Scoped the research topic and defined the analysis methodology, under the supervision of Guillaume Urvoy-Keller (CNRS).',
-    technologies: ['Data analysis', 'Research methodology', 'Python'],
+    description: 'Studied the impact of climate change on telecom infrastructure (Alpes-Maritimes), under the supervision of Guillaume Urvoy-Keller: from scoping to statistical analysis.',
+    technologies: ['Data analysis', 'Research methodology', 'Figma', 'StarUML', 'Scrum', 'Python', 'DuckDB'],
     contract: 'Final year internship',
     location: 'Sophia Antipolis, France · On site',
     missions: [
-      'Scoped the research topic and defined the analysis methodology',
-      'Studied the impact of climate change on telecommunications infrastructure',
-      'Analysis tied to digital sustainability challenges',
+      'Scoped the topic and ran a literature review (20+ scientific and institutional sources)',
+      'Took over and hardened a pipeline centralizing ARCEP (4 operators), Infoclimat (15 stations) and Météo-France data',
+      'Figma mockups validated with supervisors, UML use cases, then built a monitoring website (weather, network outages, Vigilance page)',
+      'Worked in Scrum (dailies, ~60 GitHub issues, reviewed PRs) with three supervisors in distinct roles; correlation analysis over 484 days',
     ],
-    impact: ['Applied CNRS research', 'Research methodology defined', 'Digital sustainability focus'],
+    impact: ['+45% outages on high-warning days (p = 0.0007)', 'All 3 internship objectives delivered', 'ML scoping note written'],
   },
   {
     company: 'ATOS',
@@ -915,7 +919,7 @@ const education: EducationItem[] = [
     degree: 'Master 2 (M2) MBDS - Mobiquité, Big Data et Intégration de Systèmes',
     school: 'Université Côte d Azur, Nice',
     period: 'Septembre 2025 - Juillet 2026',
-    status: 'En cours',
+    status: 'Terminé',
   },
   {
     degree: 'Master 2 (M2) Intelligence Artificielle appliquée',
@@ -941,7 +945,7 @@ const educationEn: EducationItem[] = [
     degree: 'Master Year 2 MBDS - Mobility, Big Data and Systems Integration',
     school: 'Université Côte d Azur, Nice',
     period: 'September 2025 - July 2026',
-    status: 'In progress',
+    status: 'Completed',
   },
   {
     degree: 'Master Year 2 Applied Artificial Intelligence',
@@ -1205,13 +1209,13 @@ export default function Portfolio() {
   const localizedStats = lang === 'fr'
     ? [
         { value: '10+', label: 'projets livrés' },
-        { value: '3', label: 'stages significatifs' },
+        { value: '4', label: 'stages significatifs' },
         { value: '1', label: 'portfolio premium' },
         { value: '100%', label: 'orienté recruteur' },
       ]
     : [
         { value: '10+', label: 'delivered projects' },
-        { value: '3', label: 'impactful internships' },
+        { value: '4', label: 'impactful internships' },
         { value: '1', label: 'premium portfolio' },
         { value: '100%', label: 'recruiter focused' },
       ];
@@ -1431,7 +1435,7 @@ export default function Portfolio() {
   };
 
   const downloadCV = () => {
-    const file = profile === 'tech' ? 'CV-Technique-Moumeni.pdf' : 'CV_Fonctionnel_Moumeni.pdf';
+    const file = profile === 'tech' ? 'CV_Technique_Moumeni.pdf' : 'CV_Fonctionnel_Moumeni.pdf';
     const link = document.createElement('a');
     link.href = `/cv/${file}`;
     link.download = file;
